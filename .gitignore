@@ -1,0 +1,4 @@
+*.pub
+allowed_signers
+**/hosting.json
+.DS_Store

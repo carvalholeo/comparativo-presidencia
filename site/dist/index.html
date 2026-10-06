@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071927">
+  <meta name="description" content="Quadros interativos de propostas dos programas presidenciais de 2026 publicados pelo TSE, com links para os documentos oficiais.">
+  <title>Propostas à Presidência 2026 · Comparativo TSE</title>
+  <style>
+    :root{color-scheme:light;--ink:#112b3c;--muted:#536a78;--line:#d6e2e8;--light:#f3f8fa;--teal:#007c83;--navy:#071927;--white:#fff;--focus:#ffb547;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--light);color:var(--ink);line-height:1.5}button,input{font:inherit}button{cursor:pointer}a{color:#006972;text-underline-offset:3px}a:hover{color:#004a53}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .top{background:var(--navy);color:#fff;border-bottom:5px solid #25b5b7}.wrap{max-width:1330px;margin:auto;padding:0 28px}.top .wrap{padding-top:30px;padding-bottom:30px}.eyebrow{color:#65d6d7;text-transform:uppercase;font-weight:800;letter-spacing:.12em;font-size:.85rem}.top h1{font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.05em;line-height:1.08;margin:8px 0 12px;max-width:850px}.top p{font-size:1.1rem;color:#d2e7ee;margin:0;max-width:920px}.context{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}.context span{border:1px solid #3a5a69;border-radius:100px;padding:5px 12px;color:#d2e7ee;font-size:.88rem}
+    main{padding:24px 0 70px}.method{background:#e6f3f4;border-left:5px solid #008b91;padding:18px 22px;margin-bottom:22px;border-radius:0 10px 10px 0}.method p{margin:0}.method p+p{margin-top:7px}.method strong{color:#063b46}.controls{position:sticky;top:0;z-index:5;background:rgba(243,248,250,.97);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:22px;box-shadow:0 8px 25px rgba(7,25,39,.08)}.control-row{display:flex;align-items:end;gap:14px;flex-wrap:wrap}.search{flex:1 1 350px}.search label{display:block;font-weight:750;margin-bottom:6px}.search input{width:100%;padding:11px 14px;border:1.5px solid #93aab6;border-radius:8px;background:white;min-height:48px}.small-btn{min-height:45px;padding:9px 14px;background:#fff;border:1px solid #8ca7b1;border-radius:8px;color:#164452;font-weight:700}.small-btn:hover{background:#e5f3f5}.filters-label{font-weight:750;margin:13px 0 8px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #98b5bd;background:#fff;color:#17424d;padding:7px 12px;border-radius:100px;font-size:.91rem;font-weight:700;min-height:40px}.chip[aria-pressed="true"]{background:#006f75;color:#fff;border-color:#006f75}.chip:hover{border-color:#006f75}.status{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:15px 2px;color:var(--muted);font-weight:650}.source-home{font-size:.9rem}
+    details.theme{background:#fff;border:1px solid var(--line);border-radius:12px;margin:0 0 12px;overflow:hidden;box-shadow:0 2px 6px rgba(7,25,39,.025)}details.theme[open]{border-color:#9ec8cc;box-shadow:0 8px 25px rgba(7,25,39,.07)}summary{display:flex;align-items:center;gap:14px;list-style:none;padding:17px 20px;cursor:pointer}summary::-webkit-details-marker{display:none}summary:hover{background:#f5fbfc}.num{font-size:.83rem;color:#17878d;font-weight:800;min-width:31px}.title{font-size:1.17rem;font-weight:780;flex:1;letter-spacing:-.015em}.count{color:#627e87;font-size:.9rem;font-weight:600}.chev{font-size:1.3rem;color:#087d85;line-height:1;transition:transform .15s}details[open] .chev{transform:rotate(180deg)}.table-wrap{border-top:1px solid var(--line)}table{width:100%;border-collapse:collapse;table-layout:fixed}th{text-align:left;background:#eef6f7;color:#365767;font-size:.81rem;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px}td{vertical-align:top;border-top:1px solid #e6eef1;padding:15px 18px;font-size:.97rem}tbody tr:first-child td{border-top:0}th:nth-child(1),td:nth-child(1){width:18%}th:nth-child(2),td:nth-child(2){width:49%}th:nth-child(3),td:nth-child(3){width:17%}th:nth-child(4),td:nth-child(4){width:16%}.person{font-weight:800;display:block}.party{display:block;color:var(--muted);font-size:.83rem;margin-top:2px}.missing{color:#6e7880;font-style:italic}.date{font-size:.88rem;color:#345766}.date small{display:block;color:#6b7980;font-size:.79rem}.link{font-size:.9rem;font-weight:700}.link.secondary{display:block;font-weight:500;margin-top:4px;font-size:.82rem}.empty{padding:40px 20px;background:white;border:1px dashed #9bb6bd;border-radius:12px;text-align:center;color:var(--muted)}.foot{background:#eaf2f5;border-top:1px solid var(--line);padding:24px 0;color:#405e6b;font-size:.92rem}.foot p{margin:0 0 8px}.foot p:last-child{margin:0}
+    @media(max-width:800px){.wrap{padding-left:16px;padding-right:16px}.top .wrap{padding-top:22px;padding-bottom:24px}.top p{font-size:1rem}.controls{position:static}.control-row{align-items:stretch}.small-btn{flex:1}.status{display:block}.source-home{display:block;margin-top:5px}summary{padding:15px 14px;gap:8px}.title{font-size:1.05rem}.count{font-size:.8rem}thead{display:none}table,tbody,tr,td{display:block;width:100%!important}tbody tr{border-top:1px solid #dbe8ec;padding:12px 16px}tbody tr:first-child{border-top:0}td{border:0;padding:3px 0}td:nth-child(1){margin-bottom:6px}td:nth-child(2){margin-bottom:8px}.party{display:inline;margin-left:6px}.date small{display:inline;margin-left:4px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <div class="eyebrow">Eleições presidenciais · 2026</div>
+    <h1>Compare as propostas, tema por tema</h1>
+    <p>Oito candidaturas, 34 assuntos e acesso direto aos programas oficiais reunidos pelo Tribunal Superior Eleitoral.</p>
+    <div class="context"><span>Fonte principal: planos no TSE</span><span>Recorte: campanha de 2026</span><span>Consulta: 03/10/2026</span></div>
+  </div></header>
+  <main class="wrap">
+    <aside class="method" aria-label="Critério de leitura">
+      <p><strong>Como ler:</strong> os resumos são paráfrases das medidas nos programas oficiais. O link “Plano, p. X” abre o PDF na página indicada. “Não localizada” significa que esta leitura não encontrou medida específica sobre o assunto; não é uma afirmação sobre a posição pessoal do candidato.</p>
+      <p><strong>Quando:</strong> a <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/nova-pagina-no-portal-do-tse-reune-planos-de-governo-de-presidenciaveis" target="_blank" rel="noopener noreferrer">página temática do TSE foi publicada em 24/09/2026</a>, após o <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Agosto/eleicoes-2026-propaganda-eleitoral-nas-ruas-e-na-internet-comeca-neste-domingo-16" target="_blank" rel="noopener noreferrer">início oficial da campanha em 16/08/2026</a>. Os documentos consultados não informam, para cada medida, a data em que foi formulada. Por isso, a coluna mostra a data verificável da publicação temática, sem apresentá-la como data da promessa. Nenhuma fala ou programa de eleições anteriores foi usado.</p>
+    </aside>
+    <section class="controls" aria-label="Busca e filtros">
+      <div class="control-row"><div class="search"><label for="query">Pesquisar temas e propostas</label><input id="query" type="search" placeholder="Ex.: previdência, clima, transporte..." autocomplete="off"></div><button id="openAll" class="small-btn" type="button">Expandir temas</button><button id="closeAll" class="small-btn" type="button">Minimizar temas</button></div>
+      <p class="filters-label">Mostrar candidatos</p><div class="chips" id="filters" role="group" aria-label="Filtrar por candidato"></div>
+    </section>
+    <div class="status"><span id="resultCount" aria-live="polite"></span><a class="source-home" href="https://www.tse.jus.br/eleicoes/eleicoes-2026-content/propostas-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026/planos-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026" target="_blank" rel="noopener noreferrer">Ver todos os planos no TSE</a></div>
+    <div id="themes"></div><div id="empty" class="empty" hidden>Nenhum tema ou proposta corresponde à pesquisa e ao filtro selecionados.</div>
+  </main>
+  <footer class="foot"><div class="wrap"><p>Comparativo documental. Promessas e planos não equivalem a políticas executadas nem a avaliação de viabilidade.</p><p>Fonte: Tribunal Superior Eleitoral, programas e índice temático das eleições de 2026; índice disponibilizado em 24/09/2026. Síntese editorial consultada em 03/10/2026.</p></div></footer>
+  <script src="data.js"></script>
+  <script>
+    const $=id=>document.getElementById(id);
+    const norm=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    let selected='all';
+    function make(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el}
+    function sourceUrl(c,page){return base+'arquivos/proposta-'+c.file+(page?'#page='+page:'')}
+    function indexUrl(c){return base+'propostas-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026/'+c.index}
+    const filterRoot=$('filters');
+    [['all','Todos'],...candidates.map((c,i)=>[String(i),c.name])].forEach(([id,label])=>{const b=make('button','chip',label);b.type='button';b.setAttribute('aria-pressed',id===selected?'true':'false');b.addEventListener('click',()=>{selected=id;filterRoot.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));render()});filterRoot.append(b)});
+    function render(){const root=$('themes');const openBefore=new Set([...root.querySelectorAll('details[open]')].map(e=>e.dataset.theme));root.replaceChildren();const query=norm($('query').value.trim());let visible=0,proposals=0;
+      themes.forEach(([title,rows],themeIndex)=>{const matches=[];rows.forEach((entry,i)=>{if(selected!=='all'&&selected!==String(i))return;const searchable=norm(title+' '+candidates[i].name+' '+(entry?entry[0]:''));if(query&&!searchable.includes(query))return;matches.push([entry,i])});if(!matches.length)return;visible++;proposals+=matches.filter(([x])=>x).length;
+        const details=make('details','theme');details.dataset.theme=String(themeIndex);if(openBefore.has(String(themeIndex))||(!query&&themeIndex===0&&root.childElementCount===0))details.open=true;if(query)details.open=true;
+        const summary=make('summary');summary.append(make('span','num',String(themeIndex+1).padStart(2,'0')),make('span','title',title),make('span','count',matches.filter(([x])=>x).length+' com proposta'),make('span','chev','⌄'));details.append(summary);
+        const wrap=make('div','table-wrap'),table=make('table'),head=make('thead'),hr=make('tr');['Candidato','Proposta ou registro','Fonte oficial','Quando'].forEach(x=>hr.append(make('th','',x)));head.append(hr);table.append(head);const body=make('tbody');
+        matches.forEach(([entry,i])=>{const c=candidates[i],tr=make('tr');const person=make('td');person.append(make('span','person',c.name),make('span','party',c.party));tr.append(person);const proposal=make('td',entry?'':'missing',entry?entry[0]:'Não localizada medida específica no plano consultado.');tr.append(proposal);
+          const src=make('td');const link=make('a','link',entry?'Plano, p. '+entry[1]:'Plano completo');link.href=sourceUrl(c,entry&&entry[1]);link.target='_blank';link.rel='noopener noreferrer';src.append(link);const idx=make('a','link secondary','Índice do TSE');idx.href=indexUrl(c);idx.target='_blank';idx.rel='noopener noreferrer';src.append(idx);tr.append(src);
+          const date=make('td','date','24/09/2026');date.append(make('small','', 'publicação do índice TSE'));tr.append(date);body.append(tr)});table.append(body);wrap.append(table);details.append(wrap);root.append(details)});
+      $('resultCount').textContent=visible+' de '+themes.length+' temas · '+proposals+' propostas localizadas';$('empty').hidden=visible!==0;
+    }
+    $('query').addEventListener('input',render);
+    $('openAll').addEventListener('click',()=>document.querySelectorAll('details.theme').forEach(x=>x.open=true));
+    $('closeAll').addEventListener('click',()=>document.querySelectorAll('details.theme').forEach(x=>x.open=false));
+    render();
+  </script>
+</body>
+</html>
